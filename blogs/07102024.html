@@ -28,16 +28,12 @@
         <nav class="navigation__container">
           <ul class="navigation__list">
             <li><a href="/">Home</a></li>
-            <li><a href="https://leemillsgroup.com/#work">Portfolio</a></li>
-            <li><a href="https://leemillsgroup.com/#blog">Blog</a></li>
-            <li><a href="https://leemillsgroup.com/#contact">Contact</a></li>
+            <li><a href="/#work">Portfolio</a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
           </ul>
         </nav>
-        <a
-          class="navigation__cta button"
-          href="https://leemillsgroup.com/#contact"
-          >Get A Quote</a
-        >
+        <a class="navigation__cta button" href="/#contact">Get A Quote</a>
         <div class="navigation__burger">
           <span class="navigation__burger-el navigation__burger-el--top"></span>
           <span
@@ -117,8 +113,8 @@
     <footer class="footer">
       <div class="footer__wrapper wrapper--large">
         <p class="footer__copyright no-margin">&copy; 2024 Jenny Lee</p>
-        <a class="footer__logo logo" href="./#top">JL</a>
-        <a class="footer__arrow" href="./#top">
+        <a class="footer__logo logo" href="#top">JL</a>
+        <a class="footer__arrow" href="#top">
           <svg
             class="footer__arrow-el"
             xmlns="http://www.w3.org/2000/svg"
@@ -150,6 +146,12 @@
         document.write(
           '<script src="../assets/js/vendor/jquery-2.2.4.min.js"><\/script>'
         );
+    </script>
+    <script>
+      $("a").on("click", function (e) {
+        e.preventDefault(); // prevents default behavior
+        window.location.href = $(this).attr("href"); // correct navigation
+      });
     </script>
     <script src="../assets/js/functions-min.js"></script>
   </body>
